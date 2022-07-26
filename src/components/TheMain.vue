@@ -1,7 +1,13 @@
 <template>
 <main>
   <div class="container">
-    <div class="row justify-content-between" v-show="disks.length <= 10">
+    <div class="row" v-show="disks.length <= 10">
+    <div class="d-flex flex-wrap">
+    <TheList
+        v-for="(disk, index) in disks"
+        :key="index"
+        :disk="disk"/>
+    </div>
     </div>
   </div>
 </main>
@@ -9,6 +15,8 @@
 
 <script>
 import axios from 'axios';
+import TheList from './TheList';
+
 
 export default {
   data: function () {
@@ -17,6 +25,7 @@ export default {
     };
   },
   components: {
+    TheList,
   },
   methods: {
       },
@@ -29,8 +38,7 @@ export default {
 </script>
 
 <style lang="scss">
-
-.col-2 {
-  margin: 0 auto;
+main{
+    padding:70px 0;
 }
 </style>
