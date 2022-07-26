@@ -1,5 +1,6 @@
 <template>
-<div></div>
+  <div id="app">
+  </div>
 </template>
 
 <script>
@@ -14,4 +15,5 @@ export default {
 
 <style lang="scss">
 @import "~bootstrap/scss/bootstrap.scss";
+@import "./assets/sass/variables.scss";
 </style>
